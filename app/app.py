@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route('/dynia')
 def dynia():
-    return '<h3>dynia6</h3.'
+    return '<h3>dynia7</h3.'
 
 # Run the app
 if __name__ == '__main__':
