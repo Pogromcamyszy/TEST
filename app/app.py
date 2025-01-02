@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Define a route for the home page
 @app.route('/')
 def hello_world():
-    return 'azerbejdzan'
+    return 'Hello, World!'
 
 @app.route('/dynia')
 def dynia():
