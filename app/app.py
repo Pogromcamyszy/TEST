@@ -8,6 +8,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
+@app.route('/dynia')
+def dynia():
+    return '<h3>dynia</h3.'
+
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True)
