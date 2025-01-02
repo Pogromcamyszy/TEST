@@ -12,7 +12,7 @@ def hello_world():
 def dynia():
     return '<h3>dynia7</h3.'
 
-@app.route('jabko')
+@app.route('/jabko')
 def jabko():
     return '<i>jabko</i>'
 
