@@ -12,6 +12,10 @@ def hello_world():
 def dynia():
     return '<h3>dynia7</h3.'
 
+@app.route('jabko')
+def jabko():
+    return '<i>jabko</i>'
+
 # Run the app
 if __name__ == '__main__':
     app.run(debug=True,host='0.0.0.0',port=80)
