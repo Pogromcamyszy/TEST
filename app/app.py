@@ -8,9 +8,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/dynia2')
+@app.route('/dynia3')
 def dynia():
-    return '<h3>dynia2</h3.'
+    return '<h3>dynia3</h3.'
 
 # Run the app
 if __name__ == '__main__':
