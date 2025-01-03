@@ -24,7 +24,5 @@ jobs:
 
     - name: Run Docker container in detached mode
       run: |
-        docker run -d --name my-container image13
-        docker exec my-container apk update
-        docker exec my-container apk add lynx curl
-        docker exec my-container curl https://www.w3.org
+        docker run -d --name my-container -p 8080:80 image13
+        docker exec my-container curl https://localhost:8080
