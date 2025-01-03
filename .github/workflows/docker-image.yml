@@ -26,6 +26,11 @@ jobs:
           # Scan the Docker image
            ./bin/trivy image --severity CRITICAL,HIGH image13
 
+    - name: Upload SARIF Report to GitHub Security
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        sarif_file: trivy-report.sarif
+
     - name: Show docker images
       run: docker images
 
