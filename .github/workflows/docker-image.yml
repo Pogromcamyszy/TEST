@@ -22,5 +22,9 @@ jobs:
     - name: Show docker images
       run: docker images
 
-    - name: Run docker container 
-      run: docker run image13
+    - name: Run Docker container in detached mode
+      run: |
+        docker run -d --name my-container image13
+        docker exec my-container whoami
+        docker stop my-container
+        docker rm my-container
