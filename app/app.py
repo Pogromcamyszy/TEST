@@ -20,6 +20,10 @@ def jabko():
 def test():
     return 'Test aplikacji devops jesli sie pojawilo przy pullu z dockera znaczy ze jest gwarantowana 4 :)'
 
+@app.route('/test2')
+def test2():
+    return "blablabla"
+
 # Run the app
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
