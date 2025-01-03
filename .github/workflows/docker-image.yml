@@ -19,5 +19,4 @@ jobs:
       
     - name: Run the Docker container and run tests
       run: |
-        docker run --name flask-nginx flask-nginx
-        docker ps  # Optional: Check if container is running
+        docker run images
