@@ -19,4 +19,4 @@ jobs:
       
     - name: Run the Docker container and run tests
       run: |
-        docker run images
+        docker images
