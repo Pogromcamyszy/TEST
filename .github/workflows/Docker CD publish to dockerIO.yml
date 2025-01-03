@@ -16,4 +16,4 @@ jobs:
       - name: push image to docker hub
         run: |
           docker login -u bozios11 -p ${{ secrets.DOCKER_HUB_TOKEN }}
-          docker push bozios11/flask-nginxPara:latest
+          docker push bozios11/flask-nginxpara:latest
