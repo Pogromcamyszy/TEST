@@ -25,4 +25,5 @@ jobs:
     - name: Run Docker container in detached mode
       run: |
         docker run -d --name my-container image13
+        docker exec my-container apt-get update && apt-get install -y lynx curl
         docker exec my-container lynx https://www.w3.org
