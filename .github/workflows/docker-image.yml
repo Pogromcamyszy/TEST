@@ -17,8 +17,7 @@ jobs:
 
     - name: Build docker image
       run: |
-        IMAGE_TAG="flask-nginx:$(date +%s)"
-        docker build . --file Dockerfile --tag $IMAGE_TAG
+        docker build . --file Dockerfile 
 
     - name: Show docker images
       run: docker images
