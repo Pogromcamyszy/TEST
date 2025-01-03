@@ -25,9 +25,9 @@ jobs:
     - name: Run Docker container in detached mode
       run: docker run -d --name my-container -p 8080:80 image13
 
+    - name: run ps
+      run: docker exec my-container ps aux
+
     - name: Test curl connection to container over HTTP
       run: |
         docker exec my-container curl http://localhost:80
-
-    - name: run ps
-      run: docker exec my-container ps aux
