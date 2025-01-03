@@ -15,10 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Build the Docker image
+    - name: Build docker image
       run: |
         IMAGE_TAG="flask-nginx:$(date +%s)"
         docker build . --file Dockerfile --tag $IMAGE_TAG
 
-    - name: Run the Docker container and run tests
+    - name: Show docker images
       run: docker images
+
+    - name: Run docker container 
+      run: docker run flask-nginx
