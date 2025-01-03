@@ -10,11 +10,15 @@ def hello_world():
 
 @app.route('/dynia')
 def dynia():
-    return '<h3>dynia7</h3.'
+    return '<h3>dynia7</h3>'
 
 @app.route('/jabko')
 def jabko():
     return '<i>jabko</i>'
+
+@app.route('/test')
+def test():
+    return 'Test aplikacji devops jesli sie pojawilo przy pullu z dockera znaczy ze jest gwarantowana 4 :)'
 
 # Run the app
 if __name__ == '__main__':
