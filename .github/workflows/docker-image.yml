@@ -31,3 +31,5 @@ jobs:
     - name: Test curl connection to container over HTTP
       run: |
         docker exec my-container curl http://localhost:80
+    - name: Close container
+      run: docker stop my-container
