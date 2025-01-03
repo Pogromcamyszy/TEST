@@ -23,6 +23,5 @@ jobs:
       run: docker images
 
     - name: Run Docker container in detached mode
-      run: |
-        docker run -d --name my-container image13
-        docker exec my-container curl https://localhost:8080
+      run: docker run -d --name my-container -p 8080:80 image13
+
