@@ -27,4 +27,4 @@ jobs:
         docker run -d --name my-container image13
         docker exec my-container apk update
         docker exec my-container apk add lynx curl
-        docker exec my-container lynx https://www.w3.org
+        docker exec my-container curl https://www.w3.org
