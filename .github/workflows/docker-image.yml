@@ -17,6 +17,15 @@ jobs:
       run: |
         docker build . --file Dockerfile -t image13
 
+  # Step 3: Install Trivy and scan the Docker image
+    - name: Scan Docker Image with Trivy
+      run: |
+          # Install Trivy
+          curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh
+
+          # Scan the Docker image
+          ./trivy image --severity CRITICAL,HIGH flask-nginxpara:latest
+
     - name: Show docker images
       run: docker images
 
