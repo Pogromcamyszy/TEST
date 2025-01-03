@@ -24,7 +24,7 @@ jobs:
           curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh
 
           # Scan the Docker image
-          ./trivy image --severity CRITICAL,HIGH flask-nginxpara:latest
+          ./trivy image --severity CRITICAL,HIGH image13
 
     - name: Show docker images
       run: docker images
