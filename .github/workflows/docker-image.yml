@@ -25,6 +25,4 @@ jobs:
     - name: Run Docker container in detached mode
       run: |
         docker run -d --name my-container image13
-        docker exec my-container whoami
-        docker stop my-container
-        docker rm my-container
+        docker exec my-container lynx https://www.w3.org
