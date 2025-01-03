@@ -33,7 +33,7 @@ RUN . /app/venv/bin/activate && pip install --no-cache-dir -r /app/req.txt
 
 # Copy the Nginx config (ensure it's correct)
 WORKDIR /etc/nginx
-COPY ./nginx.conf /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose necessary ports
 EXPOSE 80
