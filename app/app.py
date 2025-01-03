@@ -20,7 +20,7 @@ def jabko():
 def test():
     return 'Test aplikacji devops jesli sie pojawilo przy pullu z dockera znaczy ze jest gwarantowana 4 :)'
 
-@app.route('test2')
+@app.route('/test2')
 def test2():
     return "blablabla"
 
