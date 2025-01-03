@@ -22,7 +22,7 @@ def test():
 
 @app.route('/test2')
 def test2():
-    return "blablabla"
+    return "blablabla22"
 
 # Run the app
 if __name__ == '__main__':
