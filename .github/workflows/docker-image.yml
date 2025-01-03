@@ -14,9 +14,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag flask-nginx:$(date +%s)
-      
+      run: |
+        IMAGE_TAG="flask-nginx:$(date +%s)"
+        docker build . --file Dockerfile --tag $IMAGE_TAG
+
     - name: Run the Docker container and run tests
       run: |
-        docker images
+        IMAGE_TAG="flask-nginx:$(date +%s)"
+        docker run -d --name flask-nginx-container $IMAGE_TAG
+        docker ps  # Check if container is running
+        docker exec flask-nginx-container pytest tests/  # Replace with your actual test command
+        docker stop flask-nginx-container  # Stop the container after tests
