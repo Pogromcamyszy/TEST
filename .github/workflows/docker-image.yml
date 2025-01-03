@@ -23,4 +23,4 @@ jobs:
       run: docker images
 
     - name: Run docker container 
-      run: echo $IMAGE_TAG
+      run: docker run image13
