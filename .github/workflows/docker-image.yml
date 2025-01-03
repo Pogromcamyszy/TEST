@@ -25,3 +25,6 @@ jobs:
     - name: Run Docker container in detached mode
       run: docker run -d --name my-container -p 8080:80 image13
 
+    - name: Run curl on docker exposed port
+      run: docker exec my-container curl localhost:80
+
