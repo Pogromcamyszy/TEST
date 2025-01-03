@@ -15,6 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build .. --file Dockerfile --tag flask-nginx:$(date +%s)
-    - name: Run Docker container on localhost:80
-      run: docker run --name flask-nginx -p 8080:80 flask-nginx
+      run: docker build . --file Dockerfile --tag flask-nginx:$(date +%s)
+
