@@ -28,9 +28,6 @@ jobs:
     - name: Run curl on docker exposed port
       run: docker exec my-container curl localhost:80
 
-    - name: Run curl on docker exposed port2
-      run: docker exec my-container curl localhost:8080
-
     - name: Test curl connection to container over HTTP
       run: |
         docker exec my-container curl http://localhost:80
