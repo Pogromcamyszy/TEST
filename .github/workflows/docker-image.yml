@@ -23,7 +23,8 @@ jobs:
     - name: Run the Docker container and run tests
       run: |
         IMAGE_TAG="flask-nginx:$(date +%s)"
+        # Run the container in detached mode
         docker run -d --name flask-nginx-container $IMAGE_TAG
         docker ps  # Check if container is running
-        docker exec flask-nginx-container pytest tests/  # Replace with your actual test command
+        docker exec flask-nginx-container pytest tests/  # Run tests inside the container
         docker stop flask-nginx-container  # Stop the container after tests
