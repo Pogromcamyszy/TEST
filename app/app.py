@@ -24,6 +24,10 @@ def test():
 def test2():
     return "blablabla2222"
 
+@app.route('/test3')
+def test2():
+    return "blablabla2222"
+
 # Run the app
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
